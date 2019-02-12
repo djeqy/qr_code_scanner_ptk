@@ -5,11 +5,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
@@ -43,13 +38,15 @@ public class Main3Activity extends AppCompatActivity {
         call.enqueue(new Callback<GetPost>() {
             @Override
             public void onResponse(Call<GetPost> call, Response<GetPost> response) {
-                GetPost posts = (GetPost) response.body().getPtk();
-                List<GetPost.Ptk> ptk = posts.ptk;
-//                List<GetPost.Ptk> ptk = response.body().getPtk();
+//                GetPost posts = (GetPost) response.body().getPtk();
+//                List<GetPost.Ptk> ptk = posts.ptk;
 
+//               List<GetPost.Ptk> ptk1 = response.body().getPtk();
+
+               GetPost ptk = response.body();
 
 //                displayResponse += text + " Page\n" + total + " Total\n" + totalPages + " Total Pages\n";
-                System.out.println("Coaba1 "+ptk);
+                System.out.println("Coaba1 "+ptk.getPtk_id());
 //                System.out.println("Coaba2 "+posts);
                 System.out.println("Coaba3 "+hasilScan);
                 Toast.makeText(Main3Activity.this," response version "+response.body(),Toast.LENGTH_SHORT).show();
@@ -58,13 +55,21 @@ public class Main3Activity extends AppCompatActivity {
 //                System.out.println("dsd "+co);
 //                String content="";
 //                content +="ptk_id "+ ptk.nama;
+                System.out.println("dsd"+ptk.getStatikUrl());
+                itemView.append(""+ptk.getStatikUrl()+"Selain");
 
-                for (GetPost.Ptk ptk1 : ptk) {
-                    String content="";
-                    content +="ptk_id "+ ptk1.nama;
-                    itemView.append(content);
-                    System.out.println("Coaba "+content);
-                }
+//                for(GetPost pp :ptk){
+//                    String content = "";
+//                    content += "ptk_id " + pp.nama;
+//                    itemView.append(content);
+//
+//                }
+//                for (GetPost.Ptk ptk1 : ptk) {
+//                    String content="";
+//                    content +="ptk_id "+ ptk1.nama;
+//                    itemView.append(content);
+//                    System.out.println("Coaba "+content);
+//                }
 
             }
 
