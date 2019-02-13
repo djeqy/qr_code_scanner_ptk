@@ -1,264 +1,121 @@
+
 package com.masbie.qr_code_scanner_ptk;
 
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class GetPost {
-    @SerializedName("baseUrl")
-    public String baseUrl;
-    @SerializedName("statikUrl")
-    public String statikUrl;
 
-//        @SerializedName("ptk")
-//    public String ptk;
-//
-//    public String getPtk() {
-//        return ptk;
-//    }
-    //        @SerializedName("ptk")
-//    public List<Ptk> ptk = new ArrayList<>();
+    @SerializedName("baseUrl")
+    @Expose
+    private String baseUrl;
+    @SerializedName("statikUrl")
+    @Expose
+    private String statikUrl;
+    @SerializedName("ptk")
+    @Expose
+    private Ptk ptk;
+    @SerializedName("ptk_verval")
+    @Expose
+    private List<PtkVerval> ptkVerval = null;
+    @SerializedName("instansi")
+    @Expose
+    private Instansi instansi;
+    @SerializedName("instansi_verval")
+    @Expose
+    private InstansiVerval instansiVerval;
+    @SerializedName("data_asal")
+    @Expose
+    private Object dataAsal;
+    @SerializedName("is_gugat")
+    @Expose
+    private Boolean isGugat;
+    @SerializedName("thn_verval")
+    @Expose
+    private Integer thnVerval;
+    @SerializedName("periode_verval")
+    @Expose
+    private Integer periodeVerval;
 
     public String getBaseUrl() {
         return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     public String getStatikUrl() {
         return statikUrl;
     }
 
-//    public List<Ptk> getPtk() {
-//        return ptk;
-//    }
-
-    @SerializedName("Ptl2.ptk_id")
-    @Expose
-    public int ptk_id;
-    @SerializedName("npk")
-    @Expose
-    public int npk;
-    @SerializedName("nik")
-    @Expose
-    public int nik;
-    @SerializedName("nama")
-    @Expose
-    public String nama;
-    @SerializedName("tmp_lahir")
-    @Expose
-    public String tmp_lahir;
-    @SerializedName("kelamin")
-    @Expose
-    public char kelamin;
-    @SerializedName("thn_lulus_sd")
-    @Expose
-    public int thn_lulus_sd;
-    @SerializedName("instansi_id")
-    @Expose
-    public int instansi_id;
-    @SerializedName("foto")
-    @Expose
-    public String foto;
-    @SerializedName("thn_verval")
-    @Expose
-    public int thn_verval;
-    @SerializedName("akun_id")
-    @Expose
-    public int akun_id;
-    public int getPtk_id() {
-        return ptk_id;
+    public void setStatikUrl(String statikUrl) {
+        this.statikUrl = statikUrl;
     }
 
-    public int getNpk() {
-        return npk;
+    public Ptk getPtk() {
+        return ptk;
     }
 
-    public int getNik() {
-        return nik;
+    public void setPtk(Ptk ptk) {
+        this.ptk = ptk;
     }
 
-    public String getNama() {
-        return nama;
+    public List<PtkVerval> getPtkVerval() {
+        return ptkVerval;
     }
 
-    public String getTmp_lahir() {
-        return tmp_lahir;
+    public void setPtkVerval(List<PtkVerval> ptkVerval) {
+        this.ptkVerval = ptkVerval;
     }
 
-    public char getKelamin() {
-        return kelamin;
+    public Instansi getInstansi() {
+        return instansi;
     }
 
-    public int getThn_lulus_sd() {
-        return thn_lulus_sd;
+    public void setInstansi(Instansi instansi) {
+        this.instansi = instansi;
     }
 
-    public int getInstansi_id() {
-        return instansi_id;
+    public InstansiVerval getInstansiVerval() {
+        return instansiVerval;
     }
 
-    public String getFoto() {
-        return foto;
+    public void setInstansiVerval(InstansiVerval instansiVerval) {
+        this.instansiVerval = instansiVerval;
     }
 
-    public int getThn_verval() {
-        return thn_verval;
+    public Object getDataAsal() {
+        return dataAsal;
     }
 
-    public int getAkun_id() {
-        return akun_id;
+    public void setDataAsal(Object dataAsal) {
+        this.dataAsal = dataAsal;
     }
 
-    public  class Ptk {
-        public Ptk(){}
-
-        @SerializedName("ptk_id")
-        @Expose
-        public int ptk_id;
-        @SerializedName("npk")
-        @Expose
-        public int npk;
-        @SerializedName("nik")
-        @Expose
-        public int nik;
-        @SerializedName("nama")
-        @Expose
-        public String nama;
-        @SerializedName("tmp_lahir")
-        @Expose
-        public String tmp_lahir;
-        @SerializedName("kelamin")
-        @Expose
-        public char kelamin;
-        @SerializedName("thn_lulus_sd")
-        @Expose
-        public int thn_lulus_sd;
-        @SerializedName("instansi_id")
-        @Expose
-        public int instansi_id;
-        @SerializedName("foto")
-        @Expose
-        public String foto;
-        @SerializedName("thn_verval")
-        @Expose
-        public int thn_verval;
-        @SerializedName("akun_id")
-        @Expose
-        public int akun_id;
-
-        public int getPtk_id() {
-            return ptk_id;
-        }
-
-        public int getNpk() {
-            return npk;
-        }
-
-        public int getNik() {
-            return nik;
-        }
-
-        public String getNama() {
-            return nama;
-        }
-
-        public String getTmp_lahir() {
-            return tmp_lahir;
-        }
-
-        public char getKelamin() {
-            return kelamin;
-        }
-
-        public int getThn_lulus_sd() {
-            return thn_lulus_sd;
-        }
-
-        public int getInstansi_id() {
-            return instansi_id;
-        }
-
-        public String getFoto() {
-            return foto;
-        }
-
-        public int getThn_verval() {
-            return thn_verval;
-        }
-
-        public int getAkun_id() {
-            return akun_id;
-        }
+    public Boolean getIsGugat() {
+        return isGugat;
     }
 
-    //    @SerializedName("ptk_id")
-//    private int ptk_id;
-//    @SerializedName("npk")
-//    private int npk;
-//    @SerializedName("nik")
-//    private int nik;
-//    @SerializedName("nama")
-//    private String nama;
-//    @SerializedName("tmp_lahir")
-//    private String tmp_lahir;
-//    @SerializedName("kelamin")
-//    private char kelamin;
-//    @SerializedName("thn_lulus_sd")
-//    private int thn_lulus_sd;
-//    @SerializedName("instansi_id")
-//    private int instansi_id;
-//    @SerializedName("foto")
-//    private String foto;
-//    @SerializedName("thn_verval")
-//    private int thn_verval;
-//    @SerializedName("akun_id")
-//    private int akun_id;
+    public void setIsGugat(Boolean isGugat) {
+        this.isGugat = isGugat;
+    }
 
+    public Integer getThnVerval() {
+        return thnVerval;
+    }
 
-//    public int getPtk_id() {
-//        return ptk_id;
-//    }
+    public void setThnVerval(Integer thnVerval) {
+        this.thnVerval = thnVerval;
+    }
 
-//    public int getNpk() {
-//        return npk;
-//    }
-//
-//    public int getNik() {
-//        return nik;
-//    }
-//
-//    public String getNama() {
-//        return nama;
-//    }
-//
-//    public String getTmp_lahir() {
-//        return tmp_lahir;
-//    }
-//
-//    public char getKelamin() {
-//        return kelamin;
-//    }
-//
-//    public int getThn_lulus_sd() {
-//        return thn_lulus_sd;
-//    }
-//
-//    public int getInstansi_id() {
-//        return instansi_id;
-//    }
-//
-//    public String getFoto() {
-//        return foto;
-//    }
-//
-//    public int getThn_verval() {
-//        return thn_verval;
-//    }
-//
-//    public int getAkun_id() {
-//        return akun_id;
-//    }
+    public Integer getPeriodeVerval() {
+        return periodeVerval;
+    }
+
+    public void setPeriodeVerval(Integer periodeVerval) {
+        this.periodeVerval = periodeVerval;
+    }
 
 }
-
