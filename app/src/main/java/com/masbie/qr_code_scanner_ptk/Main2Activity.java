@@ -22,20 +22,20 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
     }
 
-    public void pindah(View view) {
-        Intent intent= new Intent(Main2Activity.this, MainActivity.class);
-        startActivity(intent);
-    }
+//    public void pindah(View view) {
+//        Intent intent= new Intent(Main2Activity.this, MainActivity.class);
+//        startActivity(intent);
+//    }
 
     public void scan(View view) {
         Intent intent= new Intent(Main2Activity.this, BarcodeCaptureActivity.class);
         startActivity(intent);
     }
-    public void coba(View view) {
-        Intent intent= new Intent(Main2Activity.this, Main3Activity.class);
-        intent.putExtra("ptk_id", "20253484185001");
-        startActivity(intent);
-    }
+//    public void coba(View view) {
+//        Intent intent= new Intent(Main2Activity.this, Main3Activity.class);
+//        intent.putExtra("ptk_id", "20253484185001");
+//        startActivity(intent);
+//    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_BARCODE_CAPTURE) {

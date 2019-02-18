@@ -344,6 +344,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         float bestDistance = Float.MAX_VALUE;
         for (BarcodeGraphic graphic : mGraphicOverlay.getGraphics()) {
             Barcode barcode = graphic.getBarcode();
+            Intent intent= new Intent(BarcodeCaptureActivity.this, Main3Activity.class);
+            intent.putExtra("ptk_id", barcode.displayValue);
+            startActivity(intent);
             if (barcode.getBoundingBox().contains((int) x, (int) y)) {
                 // Exact hit, no need to keep looking.
                 best = barcode;

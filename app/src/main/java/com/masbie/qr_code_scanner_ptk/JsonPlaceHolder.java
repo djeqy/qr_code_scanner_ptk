@@ -5,8 +5,11 @@ import java.lang.annotation.Target;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 import static java.lang.annotation.ElementType.METHOD;
@@ -27,4 +30,6 @@ public interface JsonPlaceHolder {
 //    String value();
 //
 //}
+@GET("/media_resources/{imageName}")
+void getImage(@Path("imageName") String imageName, Callback<Response> callback);
 }

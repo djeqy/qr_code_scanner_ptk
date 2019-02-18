@@ -13,9 +13,9 @@ public class GetPost {
     @SerializedName("statikUrl")
     @Expose
     private String statikUrl;
-//    @SerializedName("ptk")
-//    @Expose
-//    private Ptk ptk;
+    @SerializedName("ptk")
+    @Expose
+    private Ptk ptk;
 //    @SerializedName("ptk_verval")
 //    @Expose
 //    private List<PtkVerval> ptkVerval = null;
@@ -54,13 +54,13 @@ public class GetPost {
         this.statikUrl = statikUrl;
     }
 
-//    public Ptk getPtk() {
-//        return ptk;
-//    }
-//
-//    public void setPtk(Ptk ptk) {
-//        this.ptk = ptk;
-//    }
+    public Ptk getPtk() {
+        return ptk;
+    }
+
+    public void setPtk(Ptk ptk) {
+        this.ptk = ptk;
+    }
 
 //    public List<PtkVerval> getPtkVerval() {
 //        return ptkVerval;
